@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Sep 26 15:30:37 COT 2019
+#Thu Sep 26 20:41:50 COT 2019
 56.path=lib/arm64-v8a/libimagepipeline.so
 5.base=/Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 42.base=/Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/build/intermediates/transforms/mergeJniLibs/debug/0

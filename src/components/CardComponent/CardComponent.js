@@ -22,7 +22,7 @@ const CardComponent = ({ onPress, title, image, children }) => {
               <Col size={30} style={Styles.container}>
                 <View style={Styles.imageContainer}>
                   <Image 
-                    source={image}
+                    source={{uri: image}}
                   />
                 </View>
               </Col>

@@ -1,8 +1,9 @@
 import {combineReducers} from 'redux'
+import cocktailListReducer from './cocktailListReducer'
 
 
-const reducers = combineReducers({
-  Places: PlacesReducer
+const rootReducer = combineReducers({
+  CocktailList: cocktailListReducer
 })
 
-export default reducers
+export default rootReducer

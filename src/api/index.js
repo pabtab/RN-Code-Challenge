@@ -6,3 +6,9 @@ export const getListCocktails = async () => {
 
   return data;
 }
+
+export const getDetailCocktail = async (idDrink) => {
+  const query = await fetch(`${BASE_API}lookup.php?i=${idDrink}`);
+  const data = await query.json();
+  return data.drinks[0];
+}

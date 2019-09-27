@@ -16,8 +16,11 @@ const CocktailList = (props) => {
     dispatch(callCocktailList())
   }, [dispatch])
 
-  const handleClickCard = () => {
-    props.navigation.navigate('Detail')
+  const handleClickCard = ({ idDrink, strDrink }) => {
+    props.navigation.navigate('Detail', {
+      cocktailId: idDrink,
+      cocktailName: strDrink
+    })
   }
 
   const renderKey = (item) => item.idDrink
@@ -26,7 +29,7 @@ const CocktailList = (props) => {
     return <CardComponent 
       title={item.strDrink}
       image={item.strDrinkThumb}
-      onPress={handleClickCard}
+      onPress={() => handleClickCard(item)}
     />
     //return <View></View>
   }

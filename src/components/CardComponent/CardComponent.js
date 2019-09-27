@@ -4,31 +4,52 @@ import { Card, CardItem, Body, Text, Right, Grid, Col } from 'native-base';
 
 import Styles from './CardComponent.styles'
 
-const CardComponent = ({ onPress, title, image, children }) => {
+const CardComponent = ({ onPress, title, image, children, expanded }) => {
+
+  const renderExpandedCard = () => (
+    <View style={Styles.containerExpandedCard}>
+      <View style={Styles.imageContainerExpanded}>
+        <Image 
+          style={Styles.imageExpanded}
+          source={{uri: image}}
+        />
+      </View>
+      <View style={Styles.bodyContainerExpanded}>
+        {children}
+      </View>
+    </View>
+  )
+
+  const renderShortCard = () => (
+    <Grid>
+      <Col size={60} style={Styles.container}>
+        <View style={Styles.titleContainer}>
+          <Text style={Styles.title}>{title}</Text>
+        </View>
+        <View style={Styles.bodyContainer}>
+          <Text style={Styles.body}>{children}</Text>
+        </View>
+      </Col>
+      <Col size={40} style={Styles.container}>
+        <View style={Styles.imageContainer}>
+          <Image 
+            style={Styles.image}
+            source={{uri: image}}
+          />
+        </View>
+      </Col>
+    </Grid>
+  )
+
   return (
-    <TouchableOpacity onPress={onPress}>
-      <Card style={Styles.card}>
-        <CardItem style={{borderStyle: 'dotted'}}>
-          
-            <Grid>
-              <Col size={70} style={Styles.container}>
-                <View style={Styles.titleContainer}>
-                  <Text style={Styles.title}>{title}</Text>
-                </View>
-                <View style={Styles.bodyContainer}>
-                  <Text style={Styles.body}>{children}</Text>
-                </View>
-              </Col>
-              <Col size={30} style={Styles.container}>
-                <View style={Styles.imageContainer}>
-                  <Image 
-                    source={{uri: image}}
-                  />
-                </View>
-              </Col>
-            </Grid>
-            
-          
+    <TouchableOpacity onPress={onPress} activeOpacity={onPress ? 0.5 : 1}>
+      <Card style={expanded ? Styles.cardExpanded : Styles.card}>
+        <CardItem>
+          {
+            expanded
+            ? renderExpandedCard()
+            : renderShortCard()
+          }
         </CardItem>
       </Card>
     </TouchableOpacity>

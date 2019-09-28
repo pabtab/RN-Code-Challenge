@@ -6,6 +6,8 @@ import CardComponent from '../../components/CardComponent/CardComponent';
 import Styles from './CockctailDetail.styles'
 
 
+const MAX_NUM_INGREDIENTS = 15;
+
 const CocktailDetail = (props) => {
   const cocktailId = props.navigation.getParam('cocktailId');
   const [detailCocktail, setdetailCocktail] = useState()
@@ -29,7 +31,7 @@ const CocktailDetail = (props) => {
 
   const getIngredients = () => {
     let arrIngredients = [];
-    for (let index = 1; index <= 15; index++) {
+    for (let index = 1; index <= MAX_NUM_INGREDIENTS; index++) {
       const ingredient = detailCocktail[`strIngredient${index}`];
       const measure = detailCocktail[`strMeasure${index}`];
       if (!ingredient) {

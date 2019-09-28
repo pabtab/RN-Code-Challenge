@@ -105,3 +105,6 @@ Thank you and looking forward to seeing your great work!
 
 
 
+First of all, when we define a user story the backend need to understand the feature and how can they proceed to make the endpoint and the service to deliver, so, if the backend is in our team, the task is easy because its easier change with an API with graphql can be easier or the structure in the backend and provide the info with the complete structure, but if the backend is not in our team or it's worse change the structure on the backend we can talk with the UX or designers to change the wireframe and only get a link or button to get the ingredients or something like that.
+If nothing of these alternatives is valid, so one of many solutions is call the api in each card, but, I think that solution is the worst because the performance, data, servers, network, memory, a lot of things will be implicated in this, so I think the best way to proceed for this case is with pagination in the front-end layer.
+How?, We render only 5 cards (can be 10), call the ingredients API 5 times with the respective id, and use the onEndReached of Flatlist, so when the user scroll until the last card, call the other 5 cards with the api and so on.

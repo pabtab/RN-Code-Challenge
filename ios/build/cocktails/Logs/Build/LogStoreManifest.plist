@@ -40,6 +40,40 @@
 			<key>uniqueIdentifier</key>
 			<string>92D33D78-F7B5-4009-B5EE-D4E6B4199362</string>
 		</dict>
+		<key>BBF3AB6A-C7E1-4A86-8F83-97BA943BC716</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BBF3AB6A-C7E1-4A86-8F83-97BA943BC716.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>cocktails project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cocktails</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace cocktails with scheme cocktails and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>591400211.98457897</real>
+			<key>timeStoppedRecording</key>
+			<real>591400214.71093905</real>
+			<key>title</key>
+			<string>Building workspace cocktails with scheme cocktails and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>BBF3AB6A-C7E1-4A86-8F83-97BA943BC716</string>
+		</dict>
 	</dict>
 </dict>
 </plist>

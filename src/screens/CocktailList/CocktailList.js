@@ -1,13 +1,16 @@
 import React, {useEffect, useState} from 'react'
-import { FlatList, View, ActivityIndicator } from 'react-native'
+import { FlatList, View, ActivityIndicator, Platform } from 'react-native'
 import {useSelector, useDispatch} from 'react-redux'
-import { Header, Title, Icon, Left, Body, Button, Text, } from 'native-base';
+import { Text } from 'native-base';
+import {HeaderButtons, Item} from 'react-navigation-header-buttons'
+
 import CardComponent from '../../components/CardComponent/CardComponent';
 
 import Styles from './CocktailList.styles'
 import { callCocktailList } from '../../store/actions/cocktailListActions';
 import { callDetailCocktail } from '../../store/actions/cocktailDetailActions';
 import { MAX_NUMBER_INGREDIENTS, PAGINATION_NUMBER, MAX_NUM_INGREDIENTS } from '../../utils';
+import CustomHeaderButton from '../../components/CustomHeaderComponent/CustomHeaderComponent';
 
 
 const CocktailList = (props) => {
@@ -27,6 +30,14 @@ const CocktailList = (props) => {
   useEffect(() => {
     handlePagination()
   }, [cocktailList])
+
+  useEffect(() => {
+    props.navigation.setParams({searchHandler: handleSearchButton})
+  }, [handleSearchButton])
+
+  const handleSearchButton = () => {
+
+  }
 
   const handlePagination = () => {
     const numberOfCardsShowed = dataFiltered.length;
@@ -105,8 +116,18 @@ const CocktailList = (props) => {
   )
 }
 
-CocktailList.navigationOptions = {
-  headerTitle: 'Random Drinks 0.1'
+CocktailList.navigationOptions = navData => {
+  const handleSearch = navData.navigation.getParam('searchHandler')
+  return {
+    headerTitle: 'Random Drinks 0.1',
+    headerRight: <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+      <Item
+        title='Search Cocktail'
+        iconName={Platform.OS === 'android' ? 'md-search' : 'ios-search'}
+        onPress={handleSearch}
+      />
+    </HeaderButtons>
+  }
 }
 
 export default CocktailList

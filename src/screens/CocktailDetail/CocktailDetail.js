@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { View, ActivityIndicator, FlatList, Text } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
+import { Text } from 'native-base';
 import {useSelector} from 'react-redux';
 import CardComponent from '../../components/CardComponent/CardComponent';
 import Styles from './CockctailDetail.styles';

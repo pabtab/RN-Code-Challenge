@@ -4,29 +4,31 @@ import {useSelector} from 'react-redux'
 import { getDetailCocktail } from '../../api';
 import CardComponent from '../../components/CardComponent/CardComponent';
 import Styles from './CockctailDetail.styles'
+import { MAX_NUM_INGREDIENTS } from '../../utils';
 
-
-const MAX_NUM_INGREDIENTS = 15;
 
 const CocktailDetail = (props) => {
   const cocktailId = props.navigation.getParam('cocktailId');
-  const [detailCocktail, setdetailCocktail] = useState()
-  const [ingredients, setIngredients] = useState([])
+  const [detailCocktail, setdetailCocktail] = useState();
+  const [ingredients, setIngredients] = useState([]);
+  const { payload: cocktailsWithDetails } = useSelector(state => state.CocktailPagDetail);
 
   useEffect(() => {
-    getDetailCocktailApi(cocktailId)
-  }, [])
+    getDetailCocktailApi(cocktailId);
+  }, []);
 
   useEffect(() => {
     if (detailCocktail) {
-      getIngredients()
+      getIngredients();
     }
-  }, [detailCocktail])
-  console.log(ingredients)
+  }, [detailCocktail]);
 
-  const getDetailCocktailApi = async (cocktailId) => {
-    const response = await getDetailCocktail(cocktailId);
-    setdetailCocktail(response)
+  const getDetailCocktailApi = (cocktailId) => {
+    const detailSelectedCocktail = cocktailsWithDetails.find(cocktail => (
+      cocktail.detail.idDrink === cocktailId
+    ));
+
+    setdetailCocktail(detailSelectedCocktail.detail);
   }
 
   const getIngredients = () => {
@@ -39,8 +41,8 @@ const CocktailDetail = (props) => {
         return;
       }
       
-      const receipe = `${measure} - ${ingredient}`
-      arrIngredients.push(receipe)
+      const receipe = `${measure} - ${ingredient}`;
+      arrIngredients.push(receipe);
     }
   }
 

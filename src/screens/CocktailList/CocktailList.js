@@ -5,15 +5,20 @@ import { Container, Header, Title, Content, Icon, Left, Body, Button, Text } fro
 import CardComponent from '../../components/CardComponent/CardComponent';
 
 import Styles from './CocktailList.styles'
-import { callCocktailList, callIngredientsList } from '../../store/actions/cocktailListActions';
+import { callCocktailList } from '../../store/actions/cocktailListActions';
+import { callDetailCocktail } from '../../store/actions/cocktailDetailActions';
+import { MAX_NUMBER_INGREDIENTS, PAGINATION_NUMBER, MAX_NUM_INGREDIENTS } from '../../utils';
 
-
-const PAGINATION_NUMBER = 10;
 
 const CocktailList = (props) => {
-  const [dataFiltered, setDataFiltered] = useState([])
-  const [countPagination, setCountPagination] = useState(0)
-  const {payload: cocktailList, isLoading: loadingCocktails} = useSelector(state => state.CocktailList)
+  const [dataFiltered, setDataFiltered] = useState([]);
+  const [dataCocktails, setDataCocktails] = useState([])
+  const {payload: cocktailList, isLoading: loadingCocktails} = useSelector(state => state.CocktailList);
+  const {
+    payload: cocktailListPagination,
+    isLoading: loadingCocktailsPagination
+  } = useSelector(state => state.CocktailPagDetail);
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -22,9 +27,6 @@ const CocktailList = (props) => {
 
   useEffect(() => {
     handlePagination()
-    return () => {
-      
-    };
   }, [cocktailList])
 
   const handlePagination = () => {
@@ -35,8 +37,30 @@ const CocktailList = (props) => {
       const concatNewValues = dataFiltered.concat(newDataFiltered)
 
       setDataFiltered(concatNewValues)
-      dispatch(callIngredientsList(newDataFiltered))
+      dispatch(callDetailCocktail(newDataFiltered))
     }
+  }
+
+  const getIngredients = (item) => {
+    let numOfIngredients = 0;
+    let arrIngredients = [];
+    for (let index = 1; index <= MAX_NUM_INGREDIENTS; index++) {
+      const ingredient = item.detail[`strIngredient${index}`];
+      if (ingredient) {
+        numOfIngredients++;
+
+        if (index < MAX_NUMBER_INGREDIENTS) {
+          arrIngredients.push(`${'\u2022'} ${ingredient}`);
+        }
+      } else {
+        break;
+      }
+    }
+
+    arrIngredients.push(`and ${numOfIngredients} more ingredients`);
+
+
+    return arrIngredients;
   }
 
   const handleClickCard = ({ idDrink, strDrink }) => {
@@ -53,26 +77,30 @@ const CocktailList = (props) => {
       title={item.strDrink}
       image={item.strDrinkThumb}
       onPress={() => handleClickCard(item)}
-    />
-    //return <View></View>
+    >
+      <View style={Styles.ingredientsContainer}>
+        {
+          getIngredients(item).map(item => (
+            <Text key={item} style={Styles.ingredientPreview}>{item}</Text>
+          ))
+        }
+      </View>
+    </CardComponent>
   }
 
   
-
-  // {'\u2022'}
   return (
     <View style={Styles.container}>
       {
-        loadingCocktails && !dataFiltered
+        loadingCocktails || loadingCocktailsPagination
         ? <ActivityIndicator />
         : <FlatList
-          data={dataFiltered}
-          renderItem={renderCard}
-          keyExtractor={renderKey}
-          onEndReached={handlePagination}
-          onEndReachedThreshold={0}
-          refreshing
-        />
+            data={cocktailListPagination}
+            renderItem={renderCard}
+            keyExtractor={renderKey}
+            onEndReached={handlePagination}
+            onEndReachedThreshold={0}
+          />
       }
     </View>
   )

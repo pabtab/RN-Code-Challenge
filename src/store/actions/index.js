@@ -1,9 +1,10 @@
 import { all } from 'redux-saga/effects'
-import { getCocktailListAsync, getIngredientsAsync } from './cocktailListActions'
+import { getCocktailListAsync } from './cocktailListActions'
+import { getDetailCocktailAsync } from './cocktailDetailActions'
 
 export default function* rootSaga() {
   yield all([
     getCocktailListAsync(),
-    getIngredientsAsync()
+    getDetailCocktailAsync()
   ])
 }

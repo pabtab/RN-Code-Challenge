@@ -27,7 +27,7 @@ const CardComponent = ({ onPress, title, image, children, expanded }) => {
           <Text style={Styles.title}>{title}</Text>
         </View>
         <View style={Styles.bodyContainer}>
-          <Text style={Styles.body}>{children}</Text>
+          {children}
         </View>
       </Col>
       <Col size={40} style={Styles.container}>

@@ -17,10 +17,10 @@ const card = StyleSheet.create({
     flex: 1
   },
   titleContainer: {
-    height: 50
+    height: 80
   },
   title: {
-    fontSize: 30,
+    fontSize: 25,
     color: 'gray'
   },
   imageContainer: {
@@ -44,6 +44,10 @@ const card = StyleSheet.create({
   bodyContainerExpanded: {
     marginTop: 20,
     flex: 1
+  },
+  bodyContainer: {
+    height: 50,
+    width: '100%'
   }
 })
 

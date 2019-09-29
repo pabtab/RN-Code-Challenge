@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { View, ActivityIndicator, FlatList, Text } from 'react-native'
-import {useSelector} from 'react-redux'
-import { getDetailCocktail } from '../../api';
+import React, { useEffect, useState } from 'react';
+import { View, ActivityIndicator, FlatList, Text } from 'react-native';
+import {useSelector} from 'react-redux';
 import CardComponent from '../../components/CardComponent/CardComponent';
-import Styles from './CockctailDetail.styles'
+import Styles from './CockctailDetail.styles';
 import { MAX_NUM_INGREDIENTS } from '../../utils';
 
 

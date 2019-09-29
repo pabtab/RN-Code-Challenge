@@ -1,6 +1,6 @@
-import React from 'react'
-import { View, TouchableOpacity, Image } from 'react-native'
-import { Card, CardItem, Body, Text, Right, Grid, Col } from 'native-base';
+import React from 'react';
+import { View, TouchableOpacity, Image } from 'react-native';
+import { Card, CardItem, Text, Grid, Col } from 'native-base';
 
 import Styles from './CardComponent.styles'
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
-import { ScrollView, FlatList, View, ActivityIndicator } from 'react-native'
+import { FlatList, View, ActivityIndicator } from 'react-native'
 import {useSelector, useDispatch} from 'react-redux'
-import { Container, Header, Title, Content, Icon, Left, Body, Button, Text } from 'native-base';
+import { Header, Title, Icon, Left, Body, Button, Text, } from 'native-base';
 import CardComponent from '../../components/CardComponent/CardComponent';
 
 import Styles from './CocktailList.styles'
@@ -12,7 +12,6 @@ import { MAX_NUMBER_INGREDIENTS, PAGINATION_NUMBER, MAX_NUM_INGREDIENTS } from '
 
 const CocktailList = (props) => {
   const [dataFiltered, setDataFiltered] = useState([]);
-  const [dataCocktails, setDataCocktails] = useState([])
   const {payload: cocktailList, isLoading: loadingCocktails} = useSelector(state => state.CocktailList);
   const {
     payload: cocktailListPagination,

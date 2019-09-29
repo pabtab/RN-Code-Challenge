@@ -1,4 +1,4 @@
-import {createAppContainer} from 'react-navigation'
+import {createAppContainer} from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import CocktailList from '../screens/CocktailList/CocktailList';
 import CocktailDetail from '../screens/CocktailDetail/CocktailDetail';

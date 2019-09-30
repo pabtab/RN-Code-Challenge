@@ -114,3 +114,14 @@ B) Include test coverage for the core features.
 
 
 Thank you and looking forward to seeing your great work!
+
+
+## Instructions:
+
+```
+ yarn install
+ 
+ yarn android / ios
+
+```
+

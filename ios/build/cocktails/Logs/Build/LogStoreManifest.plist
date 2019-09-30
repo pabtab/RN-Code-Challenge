@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>95A2652F-2409-4241-9E41-E3F59FED82AD</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>95A2652F-2409-4241-9E41-E3F59FED82AD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>cocktails project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cocktails</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace cocktails with scheme cocktails and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>591551228.11330497</real>
+			<key>timeStoppedRecording</key>
+			<real>591551398.22355497</real>
+			<key>title</key>
+			<string>Building workspace cocktails with scheme cocktails and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>95A2652F-2409-4241-9E41-E3F59FED82AD</string>
+		</dict>
+		<key>BBF3AB6A-C7E1-4A86-8F83-97BA943BC716</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BBF3AB6A-C7E1-4A86-8F83-97BA943BC716.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>cocktails project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>cocktails</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace cocktails with scheme cocktails and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>591400211.98457897</real>
+			<key>timeStoppedRecording</key>
+			<real>591400214.71093905</real>
+			<key>title</key>
+			<string>Building workspace cocktails with scheme cocktails and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>BBF3AB6A-C7E1-4A86-8F83-97BA943BC716</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

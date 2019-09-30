@@ -1,4 +1,4 @@
-#Thu Sep 26 15:30:36 COT 2019
+#Mon Sep 30 10:21:54 COT 2019
 base.0=/Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

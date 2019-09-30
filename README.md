@@ -17,11 +17,23 @@ Please clone the repository, complete the exercise, and submit a Pull Request fo
 
 A) Describe the strategy used to consume the API endpoints and the data management.
 
+> First of all, when we define a user story the backend need to understand the feature and how can they proceed to make the endpoint and the service to deliver, so, if the backend is in our team, the task is easy because its easier change with an API with graphql can be easier or the structure in the backend and provide the info with the complete structure, but if the backend is not in our team or it's worse change the structure on the backend we can talk with the UX or designers to change the wireframe and only get a link or button to get the ingredients or something like that.
+If nothing of these alternatives is valid, so one of many solutions is call the api in each card, but, I think that solution is the worst because the performance, data, servers, network, memory, a lot of things will be implicated in this, so I think the best way to proceed for this case is with pagination in the front-end layer.
+How?, We render only 5 cards (can be 10), call the ingredients API 5 times with the respective id, and use the onEndReached of Flatlist, so when the user scroll until the last card, call the other 5 cards with the api and so on.
+
+>I saved the data of the first API on the store and also the data that its render and fill it in each pagination call
+
 B) Explain which library was used for the routing and why. Would you use the same for a consumer facing app targeting thousands of users? Why?
+
+> I used React Navigation, because its the most used library and with good community and stars on github.
 
 C) Have you used any strategy to optimize the performance of the list generated for the first feature?
 
+> Yes, It's difficult to improve more the performance because with 10 cards initially its also bad because the endpoint is not good, but we can use memo and some other strategies. I use pagination with 10 first calls to detail api, but I know we can improve the performance a little bit more.
+
 D) Would you like to add any further comments or observations?
+
+> The challenge was very good, I made the search input as a component inside the container and not in the header bar because, I used react navigation with native base and with native base It can be easier with the header tag use the SearchBar, but the behavior meets the requirement
 
 
 ## Overview:
@@ -104,4 +116,12 @@ B) Include test coverage for the core features.
 Thank you and looking forward to seeing your great work!
 
 
+## Instructions:
+
+```
+ yarn install
+ 
+ yarn android / ios
+
+```
 

@@ -5,6 +5,10 @@ INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remot
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-vector-icons] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-screens] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.61.1] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/8fe4946b376bf84c40a2857cbba8dce9/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/c601fa79803ed68797bfacf7296e485e/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/480004f835ee6555574688037716ba8b/AndroidManifest.xml:17:1-22:12
@@ -16,6 +20,7 @@ MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /Users/pablotabareshernand
 MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/5c7c4fa8a855735439a4f79d9128d0cf/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/19d458c222d206151951ce92f6a75f4b/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/3a24cff905e347e7290d3be79228e365/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.transition:transition:1.1.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/93d600932a19e75839602ba233bd4d04/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/98aa72041ddf80119fbdb07eea84b5ab/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/f9acb418d6e07b50e0bd4ecccdb28df2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/7d63e87e2fabfbeb12216c407392b0b1/AndroidManifest.xml:17:1-22:12
@@ -132,6 +137,14 @@ uses-sdk
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-vector-icons] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.1] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/8fe4946b376bf84c40a2857cbba8dce9/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.1] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/8fe4946b376bf84c40a2857cbba8dce9/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/c601fa79803ed68797bfacf7296e485e/AndroidManifest.xml:7:5-9:41
@@ -154,6 +167,8 @@ MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/pablotabareshe
 MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/19d458c222d206151951ce92f6a75f4b/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/3a24cff905e347e7290d3be79228e365/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/3a24cff905e347e7290d3be79228e365/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.transition:transition:1.1.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/93d600932a19e75839602ba233bd4d04/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/93d600932a19e75839602ba233bd4d04/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/98aa72041ddf80119fbdb07eea84b5ab/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/98aa72041ddf80119fbdb07eea84b5ab/AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/pablotabareshernandez/.gradle/caches/transforms-2/files-2.1/f9acb418d6e07b50e0bd4ecccdb28df2/AndroidManifest.xml:20:5-44

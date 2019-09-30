@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { FlatList, View, ActivityIndicator, Platform } from 'react-native'
+import { FlatList, View, ActivityIndicator, Platform, TextInput } from 'react-native'
 import {useSelector, useDispatch} from 'react-redux'
 import { Text } from 'native-base';
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'
@@ -11,10 +11,13 @@ import { callCocktailList } from '../../store/actions/cocktailListActions';
 import { callDetailCocktail } from '../../store/actions/cocktailDetailActions';
 import { MAX_NUMBER_INGREDIENTS, PAGINATION_NUMBER, MAX_NUM_INGREDIENTS } from '../../utils';
 import CustomHeaderButton from '../../components/CustomHeaderComponent/CustomHeaderComponent';
+import Input from '../../components/Input/Input';
 
 
 const CocktailList = (props) => {
   const [dataFiltered, setDataFiltered] = useState([]);
+  const [cocktailsFiltered, setCocktailsFiltered] = useState([])
+  const [enableSearch, setEnableSearch] = useState(false)
   const {payload: cocktailList, isLoading: loadingCocktails} = useSelector(state => state.CocktailList);
   const {
     payload: cocktailListPagination,
@@ -32,24 +35,18 @@ const CocktailList = (props) => {
   }, [cocktailList])
 
   useEffect(() => {
+    setCocktailsFiltered(cocktailListPagination);
+  }, [cocktailListPagination])
+
+  useEffect(() => {
     props.navigation.setParams({searchHandler: handleSearchButton})
-  }, [handleSearchButton])
+  }, [handleSearchButton, enableSearch])
 
-  const handleSearchButton = () => {
-
-  }
-
-  const handlePagination = () => {
-    const numberOfCardsShowed = dataFiltered.length;
-    
-    if (cocktailList && cocktailList.length && !loadingCocktails) {
-      const newDataFiltered = cocktailList.slice(numberOfCardsShowed, numberOfCardsShowed + PAGINATION_NUMBER)
-      const concatNewValues = dataFiltered.concat(newDataFiltered)
-
-      setDataFiltered(concatNewValues)
-      dispatch(callDetailCocktail(newDataFiltered))
+  useEffect(() => {
+    if (!enableSearch) {
+      setCocktailsFiltered(cocktailListPagination)
     }
-  }
+  }, [enableSearch])
 
   const getIngredients = (item) => {
     let numOfIngredients = 0;
@@ -71,6 +68,29 @@ const CocktailList = (props) => {
 
 
     return arrIngredients;
+  }
+
+  const handleSearchButton = () => {
+    setEnableSearch(!enableSearch)
+  }
+
+  const handleSearchInput = (text) => {
+    const filterData = cocktailListPagination.filter(item => item.strDrink.includes(text));
+    setCocktailsFiltered(filterData)
+  }
+
+  const handlePagination = () => {
+    const numberOfCardsShowed = dataFiltered.length;
+
+    if (enableSearch) return;
+    
+    if (cocktailList && cocktailList.length && !loadingCocktails) {
+      const newDataFiltered = cocktailList.slice(numberOfCardsShowed, numberOfCardsShowed + PAGINATION_NUMBER)
+      const concatNewValues = dataFiltered.concat(newDataFiltered)
+
+      setDataFiltered(concatNewValues)
+      dispatch(callDetailCocktail(newDataFiltered))
+    }
   }
 
   const handleClickCard = ({ idDrink, strDrink }) => {
@@ -102,16 +122,29 @@ const CocktailList = (props) => {
   return (
     <View style={Styles.container}>
       {
-        loadingCocktails || loadingCocktailsPagination
-        ? <ActivityIndicator />
-        : <FlatList
-            data={cocktailListPagination}
-            renderItem={renderCard}
-            keyExtractor={renderKey}
-            onEndReached={handlePagination}
-            onEndReachedThreshold={0}
-          />
+        enableSearch
+        && (
+          <View style={Styles.searchContainer}>
+            <Input 
+              onChangeText={handleSearchInput}
+            />
+          </View>
+        )
       }
+      <View style={Styles.containerCards}>
+        {
+          loadingCocktails || loadingCocktailsPagination
+          ? <ActivityIndicator />
+          : <FlatList
+              data={cocktailsFiltered}
+              renderItem={renderCard}
+              keyExtractor={renderKey}
+              onEndReached={handlePagination}
+              onEndReachedThreshold={0}
+              ListEmptyComponent={<View></View>}
+            />
+        }
+      </View>
     </View>
   )
 }

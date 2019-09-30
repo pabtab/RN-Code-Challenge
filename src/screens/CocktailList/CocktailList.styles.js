@@ -7,6 +7,13 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primary,
     flex: 1
   },
+  searchContainer: {
+    height: 50,
+    marginBottom: 10
+  },
+  containerCards: {
+    flex: 1
+  },
   ingredientPreview:{
     fontSize: 12,
     color: 'gray'

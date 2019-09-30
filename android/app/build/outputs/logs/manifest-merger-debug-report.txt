@@ -5,6 +5,7 @@ INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remot
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-vector-icons] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-gesture-handler] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-screens] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -136,6 +137,8 @@ uses-sdk
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-vector-icons] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/pablotabareshernandez/Documents/Cursos/techincal-test-remote-work/RN-Code-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
